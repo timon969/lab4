@@ -37,3 +37,6 @@ jobs:
         with:
           name: checkstyle-report
           path: build/reports/checkstyle/main.html
+
+      - name: Run Unit Tests
+        run: ./gradlew test
