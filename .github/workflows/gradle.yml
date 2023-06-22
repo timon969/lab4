@@ -46,3 +46,12 @@ jobs:
         with:
           name: unit-test-report
           path: build/reports/tests/
+
+      - name: Build JAR
+        run: ./gradlew jar
+
+      - name: Upload JAR Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: project-jar
+          path: Model/build/libs/Model.jar
