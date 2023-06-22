@@ -30,3 +30,12 @@ jobs:
         uses: gradle/gradle-build-action@749f47bda3e44aa060e82d7b3ef7e40d953bd629
         with:
           arguments: build
+
+      - name: Run Checkstyle
+        run: ./gradlew checkstyleMain
+
+      - name: Upload Checkstyle report
+        uses: actions/upload-artifact@v2
+        with:
+          name: checkstyle-report
+          path: build/reports/checkstyle/main.html
