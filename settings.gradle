@@ -1,0 +1,5 @@
+rootProject.name = 'Library_gradle'
+include 'Model'
+include 'Controller'
+include 'View'
+
