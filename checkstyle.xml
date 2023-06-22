@@ -7,10 +7,10 @@
         <module name="AvoidStarImport"/>
         <module name="JavadocMethod"/>
         <module name="EmptyBlock"/>
-        <!-- Додайте інші вбудовані правила, які ви хочете використовувати -->
+
     </module>
 </module>
-     
+
 
 
 
