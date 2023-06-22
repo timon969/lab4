@@ -35,7 +35,7 @@ public class AppTest {
     void testCalcTwo()
     {
         System.out.println("======TEST TWO EXECUTED=======");
-        Assertions.assertEquals( 6 , 2+3);
+        Assertions.assertEquals( 5 , 2+3);
     }
 
     @AfterEach
