@@ -42,3 +42,20 @@ jobs:
 
       - name: Build JAR
         run: ./gradlew jar
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            tag_name: v1.0.0
+            release_name: Release 1.0.0
+            body: |
+              Release 1.0.0
+
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: build/libs/my-artifact.jar
